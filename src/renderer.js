@@ -13,6 +13,7 @@ const textareaDataToArray = d=>{
 
 buttonCreate.addEventListener("click", ()=>{
     console.log(textareaDataToArray(textareaClientNames.value));
+    textareaClientNames.value = "";
     // console.log(rawClientNames);
     // window.iu.mkdir(rawClientNames)
 });
