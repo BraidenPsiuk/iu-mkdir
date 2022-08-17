@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link type="text/css" rel="stylesheet" href="lib/materialize.min.css"  media="screen,projection"/>
-    <script defer src="lib/materialize.min.js"></script>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <!-- <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>. -->
 
+<head>
+  <link type="text/css" rel="stylesheet" href="lib/bootstrap.min.css" />
+  <script defer src="lib/jquery.slim.min.js"></script>
+  <script defer src="lib/bootstrap.min.js"></script>
+  <script defer type="module" src="renderer.js"></script>
+  <meta charset="UTF-8">
+  <title>IU Dropbox Folder Builder</title>
+</head>
 
-    <div class="row">
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <textarea id="textarea1" class="materialize-textarea"></textarea>
-            <label for="textarea1">Client Names</label>
-          </div>
-        </div>
-      </form>
-    </div>
+<body>
+  <div class="container-fluid">
+    <p>Enter each name followed by a return to generate Dropbox folder structures.</p>
+    <textarea id="textarea-clientnames" class="form-control form-control-lg" type="text" placeholder="Enter names here..."
+      aria-label=".form-control-lg example" rows="10"></textarea>
+    <button id="button-create" type="button" class="btn btn-primary">Primary</button>
+  </div>
+</body>
 
-    <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>
-          
-
-
-  </body>
 </html>
